@@ -1,7 +1,12 @@
 import React from "react";
+import Sushi from "./Sushi";
 
-function MoreButton(props) {
-  return <button onClick={/* Fill me in! */ null}>More sushi!</button>;
+function MoreButton({onSetPerpage}) {
+  function handleClick() {
+    onSetPerpage(prePerpage => prePerpage +4)
+  }
+
+  return <button onClick={handleClick}>More sushi!</button>;
 }
 
 export default MoreButton;
